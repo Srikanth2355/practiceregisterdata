@@ -14,6 +14,7 @@ function AddUser(props) {
         if (+enteredage < 5) { //+ converts string into number
             return;
         }
+        props.onAdduser(enteredusername,enteredage);
         setenteredusername('');
         setenteredage('');
     }
