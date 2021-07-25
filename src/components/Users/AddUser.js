@@ -3,7 +3,7 @@ import Card from "../UI/Card";
 import Button from '../UI/Button'
 import classes from "./AddUser.module.css"
 import ErrorModal from '../UI/ErrorModal';
-import wrapper from '../Helper/Wrapper';
+import Wrapper from '../Helper/Wrapper';
 
 
 function AddUser(props) {
@@ -40,7 +40,7 @@ function AddUser(props) {
         seterror(null);
     }
     return (
-        <wrapper>
+        <Wrapper>
             {error && <ErrorModal title={error.title} message={error.message} ok={ myerrorhandler}/>}
             <Card className={classes.input}>
                 <form   onSubmit={adduserHandler}>
@@ -51,7 +51,7 @@ function AddUser(props) {
                     <Button type="submit">Add User</Button>
                 </form> 
             </Card>
-        </wrapper>       
+        </Wrapper>       
     )
 }
 
